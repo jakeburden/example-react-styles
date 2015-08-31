@@ -1,0 +1,24 @@
+{
+  "name": "example-react-styles",
+  "version": "1.0.0",
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "scripts": {
+    "build": "NODE_ENV=production browserify index.js | uglifyjs -cm > public/bundle.js",
+    "start": "ecstatic public",
+    "watch": "watchify main.js -o public/bundle.js -dv"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^11.0.1",
+    "ecstatic": "^0.8.0",
+    "radium": "^0.13.8",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.4.24",
+    "watchify": "^3.3.1"
+  }
+}
